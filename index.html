@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" id="switcher-id" href="#" />
+  </head>
+  <body>
+    <div id="container-bulles"></div>
+    <header>
+      <h1>
+        Un switcher de thème CSS<br />
+        en Javascript
+      </h1>
+
+      <div class="theme-switches">
+        <div data-theme="light" class="switch" id="switch-1"></div>
+
+        <div data-theme="sky" class="switch" id="switch-2"></div>
+
+        <div data-theme="purple" class="switch" id="switch-3"></div>
+
+        <div data-theme="dark" class="switch" id="switch-4"></div>
+      </div>
+      <h5 id="title"></h5>
+      <div id="color-box" class="gradientBox" title="Choose your color !!!">
+        <input
+          id="color-range"
+          type="range"
+          min="1"
+          max="360"
+          name="input-range"
+        />
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="box">
+        <div class="wrapper">
+          <img src="oiseau.jpg" alt="Placeholder" class="image" />
+          <p
+            id="mess-play"
+            title="Please ! Don't hurt me... &#10;Loop mode is activated !"
+          >
+            Play
+          </p>
+          <!-- <p id="mess-stop">Stop</p> -->
+          <audio controls play>
+            <!-- <source src="./theme/parrot.color.mp3" type="audio/ogg"> -->
+            <source src="./theme/parrot-color.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+        <div class="text">
+          <h3>
+            Un petit commentaire.
+            <div id="box-underline"></div>
+          </h3>
+          <p>
+            Dans cet exemple on utilise JS pour venir modifier un élément LINK
+            dans la section HEAD du document et lui appliquer le nom de la
+            feuille de style de la couleur du thème choisi parmi les couleurs
+            proposées dans le bloc HEADER du BODY. Particularité CSS, on fait
+            appel au sélecteur :root en début de feuille de style pour déclarer
+            des variables avec des codes couleurs prédéfinis. Cela nous permet
+            d'utiliser le nom des couleurs définies plutôt que leur valeur
+            hexadécimale.
+          </p>
+          <div class="container-palette">
+            <p id="text-colorHex">Palette de couleur :</p>
+            <p id="colorHex">
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Fin du bloc DIV class="box" -->
+    </div>
+    <!-- Fin du bloc DIV class="container" -->
+
+    <script src="switchercssjs.js"></script>
+  </body>
+</html>

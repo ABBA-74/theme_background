@@ -1,0 +1,31 @@
+/* Feuille de style Light pour le Switcher JS */
+/* Dernière révision le 04/07/2021 */
+/* Fabien Cazayous 2021 */
+/* D'après cet article : */
+/* https://www.studytonight.com/post/build-a-theme-switcher-for-your-website-with-javascript */
+
+:root {
+  --back-color: #eee;
+  --primary-color: #000000;
+  --header-back: #5d5d5d;
+  --header-text: #eee;
+}
+
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--header-back);
+  color: var(--header-text);
+}
+
+.box .wrapper {
+  /* border: 2px solid var(--primary-color); */
+  border-color: var(--primary-color);
+}
+
+#box-underline {
+  background-color: var(--primary-color);
+}
